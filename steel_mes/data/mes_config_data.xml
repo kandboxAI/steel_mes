@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="mes_config_default_data" model="mes.config">
+            <field name="name">登录</field>
+            <field name="mes_api_url">https://mes1.kuaihe.tech/mes/api/v1</field>
+            <field name="mes_login_url">https://mes1.kuaihe.tech/mes/login</field>
+            <!-- <field name="mes_api_key">duanqiyanghaibaoddduanqiyanghaibaoddduanqiyanghaibaoddd</field> -->
+            <field name="type">mes</field>
+            <field name="mes_expiration_minutes">60</field>
+        </record>
+    </data>
+</odoo>

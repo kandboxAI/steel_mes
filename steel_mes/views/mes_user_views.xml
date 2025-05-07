@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mes_user_form" model="ir.ui.view">
+            <field name="name">mes.user.form</field>
+            <field name="model">mes.user</field>
+            <field name="arch" type="xml">
+                <form string="Content">
+                    <header>
+                    </header>
+                    <sheet>
+                         <div class="oe_title">
+                            <h1><field name="name" class="oe_inline"/></h1>
+                        </div>
+                        <group>
+                            <group>
+
+                                <field name="user_id" widget="many2one_avatar_user" optional="show"/>
+                                <field name="company_id"/>
+
+                            </group>
+                            <group>
+                                <field name="role_id"/>
+                                <field name="email"/>
+                                <field name="api_key"/>
+                                <field name="password"/>
+                                <field name="session_id"/>
+
+                                <field name="mes_jwt_token"/>
+                                <field name="mes_jwt_token_expire_time"/>
+
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mes_user_list_view" model="ir.ui.view">
+            <field name="name">mes.user.list</field>
+            <field name="model">mes.user</field>
+            <field name="arch" type="xml">
+                <list default_order="write_date desc,create_date desc">
+                    <field name="name"/>
+                    <field name="company_id"/>
+                    <field name="user_id"/>
+                    <field name="role_id"/>
+                    <field name="email"/>
+                    <field name="password"/>
+                    <field name="session_id"/>
+                    <field name="mes_jwt_token"/>
+                    <field name="mes_jwt_token_expire_time"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_mes_user" model="ir.actions.act_window">
+            <field name="name">Mes User</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mes.user</field>
+            <field name="view_mode">list,form</field>
+            <field name="view_id" eval="False"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    点击创建内容
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+                action="action_mes_user"
+                name="Mes User"
+                id="menu_action_mes_user"
+                parent="menu_mes"
+        />
+    </data>
+</odoo>

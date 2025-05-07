@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mes_role_form" model="ir.ui.view">
+            <field name="name">mes.role.form</field>
+            <field name="model">mes.role</field>
+            <field name="arch" type="xml">
+                <form string="Content">
+                    <header>
+                        <button name="sync_role_send_to_mes" string="同步MES" class="oe_highlight" type="object"/>
+                    </header>
+                    <sheet>
+                         <div class="oe_title">
+                            <h1><field name="name" class="oe_inline"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="key"/>
+                                <field name="sort"/>
+                                <field name="status"/>
+                                <field name="admin"/>
+                            </group>
+                            <group>
+                                <field name="homepage_path"/>
+                                <field name="remark"/>
+
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="菜单权限">
+                                <field name="menu_lines" >
+                                    <list>
+                                        <field name="menu_id"/>
+                                        <field name="button_ids" widget="many2many_tags"/>
+                                    </list>
+                                    <form string="权限配置">
+                                        <group>
+                                            <field name="menu_id" required="1"/>
+                                            <field name="button_ids"
+                                                   widget="many2many"
+                                                   domain="[('mes_menu_id','=',menu_id)]"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mes_role_list_view" model="ir.ui.view">
+            <field name="name">mes.role.list</field>
+            <field name="model">mes.role</field>
+            <field name="arch" type="xml">
+                <list default_order="write_date desc,create_date desc">
+                    <field name="name"/>
+                    <field name="key"/>
+                    <field name="sort"/>
+                    <field name="status"/>
+                    <field name="admin"/>
+                    <field name="homepage_path"/>
+                    <field name="remark"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_mes_role" model="ir.actions.act_window">
+            <field name="name">Mes Role</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mes.role</field>
+            <field name="view_mode">list,form</field>
+            <field name="view_id" eval="False"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    点击创建内容
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+                action="action_mes_role"
+                name="Mes Role"
+                id="menu_action_mes_role"
+                parent="menu_mes"
+        />
+    </data>
+</odoo>

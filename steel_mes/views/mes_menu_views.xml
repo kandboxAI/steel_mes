@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mes_menu_form" model="ir.ui.view">
+            <field name="name">mes.menu.form</field>
+            <field name="model">mes.menu</field>
+            <field name="arch" type="xml">
+                <form string="Content">
+                    <header>
+                    </header>
+                    <sheet>
+                         <div class="oe_title">
+                            <h1><field name="name" class="oe_inline"/></h1>
+                        </div>
+                        <group>
+                            <group>
+
+                                <field name="title"/>
+                                <field name="sort"/>
+                                <field name="icon"/>
+                                <field name="is_link"/>
+                                <field name="is_catalog"/>
+                                <field name="visible"/>
+
+                                <field name="parent_id"/>
+
+                            </group>
+                            <group>
+                                <field name="status"/>
+                                <field name="web_path"/>
+                                <field name="component"/>
+                                <field name="component_name"/>
+                                <field name="desc"/>
+
+
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="按钮" name="buttons">
+                                <field name="button_ids" mode="list,kanban" >
+                                    <list editable="bottom">
+                                        <field name="name"/>
+                                        <field name="value"/>
+                                        <field name="api"/>
+                                        <field name="remark"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mes_menu_list_view" model="ir.ui.view">
+            <field name="name">mes.menu.list</field>
+            <field name="model">mes.menu</field>
+            <field name="arch" type="xml">
+                <list default_order="write_date desc,create_date desc">
+                    <field name="name"/>
+                    <field name="title"/>
+                    <field name="sort"/>
+                    <field name="icon"/>
+                    <field name="is_link"/>
+                    <field name="is_catalog"/>
+                    <field name="visible"/>
+
+                    <field name="parent_id"/>
+                    <field name="status"/>
+                    <field name="web_path"/>
+                    <field name="component"/>
+                    <field name="component_name"/>
+                    <field name="desc"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_mes_menu" model="ir.actions.act_window">
+            <field name="name">Mes Menu</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mes.menu</field>
+            <field name="view_mode">list,form</field>
+            <field name="view_id" eval="False"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    点击创建内容
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+                action="action_mes_menu"
+                name="Mes Menu"
+                id="menu_action_mes_menu"
+                parent="menu_mes"
+        />
+    </data>
+</odoo>

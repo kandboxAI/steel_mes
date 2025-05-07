@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mes_api_key_default" model="ir.config_parameter">
+        <field name="key">mes_config.mes_api_key</field>
+        <field name="value">duanqiyanghaibaoddduanqiyanghaibaoddduanqiyanghaibaoddd</field>
+    </record>
+</odoo>

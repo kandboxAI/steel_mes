@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem name="MES" id="menu_mes"
+
+                  groups="base.group_user"
+                  sequence="10"
+                  web_icon="menu_mes,steel_mes/static/description/icon.png"
+                  active="True"
+        />
+
+    </data>
+</odoo>

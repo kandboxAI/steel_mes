@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mes_config,mes_config.mes_config,model_mes_config,base.group_user,1,1,1,1
+access_mes_role,mes_role.mes_role,model_mes_role,base.group_user,1,1,1,1
+access_mes_user,mes_user.mes_user,model_mes_user,base.group_user,1,1,1,1
+access_mes_menu,mes_menu.mes_menu,model_mes_menu,base.group_user,1,1,1,1
+access_mes_menu_button,mes_menu_button.mes_menu_button,model_mes_menu_button,base.group_user,1,1,1,1
+access_mes_role_menu_rel,mes_role_menu_rel.mes_role_menu_rel,model_mes_role_menu_rel,base.group_user,1,1,1,1

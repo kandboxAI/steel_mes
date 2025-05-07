@@ -1,0 +1,120 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<openerp>-->
+<!--    <data >-->
+<!--        <record id="group_sale_purchase_unlock" model="res.groups">-->
+<!--            <field name="name">销售/采购解锁</field>-->
+<!--            <field name="category_id" ref="base.module_category_hidden"/>-->
+<!--        </record>-->
+
+<!--        <record model="ir.module.category" id="channel_information_maintain">-->
+<!--            <field name="name">渠道信息</field>-->
+<!--            <field name="description">渠道信息维护</field>-->
+<!--            <field name="sequence">3</field>-->
+<!--        </record>-->
+
+<!--        <record id="channel_information_operator" model="res.groups">-->
+<!--            <field name="name">渠道信息维护</field>-->
+<!--            <field name="category_id" ref="sun_sale.channel_information_maintain"/>-->
+<!--        </record>-->
+
+
+<!--        <record id="channel_information_grade_access" model="ir.model.access">-->
+<!--            <field name="name">渠道信息维护编辑</field>-->
+<!--            <field name="model_id" ref="model_channel_information"/>-->
+<!--            <field name="group_id" ref="channel_information_operator"/>-->
+<!--            <field name="perm_read" eval="1"/>-->
+<!--            <field name="perm_create" eval="1"/>-->
+<!--            <field name="perm_write" eval="1"/>-->
+<!--            <field name="perm_unlink" eval="1"/>-->
+<!--        </record>-->
+
+<!--        <record id="channel_information_read_access" model="ir.model.access">-->
+<!--            <field name="name">渠道信息查看权限</field>-->
+<!--            <field name="model_id" ref="model_channel_information"/>-->
+<!--            <field name="group_id" ref="base.group_user"/>-->
+<!--            <field name="perm_read" eval="1"/>-->
+<!--            <field name="perm_create" eval="0"/>-->
+<!--            <field name="perm_write" eval="0"/>-->
+<!--            <field name="perm_unlink" eval="0"/>-->
+<!--        </record>-->
+
+
+<!--        <record id="product_saleinfo_read_access" model="ir.model.access">-->
+<!--            <field name="name">客户价格表明细查看权限</field>-->
+<!--            <field name="model_id" ref="model_product_saleinfo"/>-->
+<!--            <field name="group_id" ref="base.group_user"/>-->
+<!--            <field name="perm_read" eval="1"/>-->
+<!--            <field name="perm_create" eval="0"/>-->
+<!--            <field name="perm_write" eval="0"/>-->
+<!--            <field name="perm_unlink" eval="0"/>-->
+<!--        </record>-->
+
+<!--        <record id="product_saleinfo_operator" model="res.groups">-->
+<!--            <field name="name">客户价格表维护</field>-->
+<!--            <field name="category_id" ref="base.module_category_hidden"/>-->
+<!--        </record>-->
+
+<!--        <record id="product_saleinfo_grade_access" model="ir.model.access">-->
+<!--            <field name="name">客户价格表明细维护编辑</field>-->
+<!--            <field name="model_id" ref="model_product_saleinfo"/>-->
+<!--            <field name="group_id" ref="product_saleinfo_operator"/>-->
+<!--            <field name="perm_read" eval="1"/>-->
+<!--            <field name="perm_create" eval="1"/>-->
+<!--            <field name="perm_write" eval="1"/>-->
+<!--            <field name="perm_unlink" eval="1"/>-->
+<!--        </record>-->
+
+
+<!--        <record id="sale_info_read_access" model="ir.model.access">-->
+<!--            <field name="name">客户价格表查看权限</field>-->
+<!--            <field name="model_id" ref="model_sale_info"/>-->
+<!--            <field name="group_id" ref="base.group_user"/>-->
+<!--            <field name="perm_read" eval="1"/>-->
+<!--            <field name="perm_create" eval="0"/>-->
+<!--            <field name="perm_write" eval="0"/>-->
+<!--            <field name="perm_unlink" eval="0"/>-->
+<!--        </record>-->
+
+<!--        <record id="sale_info_grade_access" model="ir.model.access">-->
+<!--            <field name="name">客户价格表维护编辑</field>-->
+<!--            <field name="model_id" ref="model_sale_info"/>-->
+<!--            <field name="group_id" ref="product_saleinfo_operator"/>-->
+<!--            <field name="perm_read" eval="1"/>-->
+<!--            <field name="perm_create" eval="1"/>-->
+<!--            <field name="perm_write" eval="1"/>-->
+<!--            <field name="perm_unlink" eval="1"/>-->
+<!--        </record>-->
+
+
+<!--        <record id="sale_info_personal_rule" model="ir.rule">-->
+<!--            <field name="name">仅自己负责的价格表</field>-->
+<!--            <field ref="model_sale_info" name="model_id"/>-->
+<!--            <field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False)]</field>-->
+<!--            <field name="groups" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>-->
+<!--            <field name="perm_read" eval="1"/>-->
+<!--            <field name="perm_create" eval="1"/>-->
+<!--            <field name="perm_write" eval="1"/>-->
+<!--            <field name="perm_unlink" eval="1"/>-->
+<!--        </record>-->
+
+<!--        <record id="sale_info_see_all" model="ir.rule">-->
+<!--            <field name="name">所有的价格表</field>-->
+<!--            <field ref="model_sale_info" name="model_id"/>-->
+<!--            <field name="domain_force">[(1,'=',1)]</field>-->
+<!--            <field name="groups" eval="[(4, ref('sales_team.group_sale_salesman_all_leads'))]"/>-->
+<!--            <field name="perm_read" eval="1"/>-->
+<!--            <field name="perm_create" eval="1"/>-->
+<!--            <field name="perm_write" eval="1"/>-->
+<!--            <field name="perm_unlink" eval="1"/>-->
+<!--        </record>-->
+
+
+<!--        <record id="group_sale_create_invoice" model="res.groups">-->
+<!--            <field name="name">销售创建发票</field>-->
+<!--            <field name="category_id" ref="base.module_category_hidden"/>-->
+<!--        </record>-->
+
+
+<!--    </data>-->
+
+<!--</openerp>-->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_open_external_url" model="ir.actions.act_url">
+        <field name="name">MES</field>
+        <field name="url">/mes/jwt/login</field>  <!-- 替换为目标网址 -->
+        <field name="target">new</field>  <!-- 新标签页打开 -->
+    </record>
+
+    <!-- 定义菜单项 -->
+    <menuitem
+        id="menu_open_external_url"
+        name="MES System"
+        parent="menu_mes"
+        action="action_open_external_url"
+        sequence="10"
+    />
+</odoo>
