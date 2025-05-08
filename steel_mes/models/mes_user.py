@@ -13,8 +13,7 @@ class MesUser(models.Model):
         )
     company_id = fields.Many2one('res.company', related='user_id.company_id', store=True, readonly=True)
     email = fields.Char(string="用户名")
-    password = fields.Char(string="密码")
-    api_key = fields.Char(string="API KEY")
+    
     role_id = fields.Many2one(
         comodel_name='mes.role',
         string="角色"

@@ -7,10 +7,6 @@ from uuid import uuid4
 from ..utils.jwt_utils import get_valid_token
 
 
-# SECRET_KEY = "duanqiyanghaibaoddduanqiyanghaibaoddduanqiyanghaibaoddd"  # 放到系统参数更安全
-# EXPIRATION_MINUTES = 30
-# MES_LOGIN_URL = "http://localhost:8881/ed/login"  # FastAPI 登录入口
-
 class MesJWTLogin(http.Controller):
 
     @http.route('/mes/jwt/login', type='http', auth='user', website=False)

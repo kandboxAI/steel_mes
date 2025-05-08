@@ -3,7 +3,11 @@
     'name': 'Steel MES',
     'summary': 'Steel MES',
     'version': '18.0.1.0.0',
-    'category': 'Manufacturing/Manufacturing',
+    'category': 'Industries',
+    'description': '''
+        AI can build the most efficient production plan. We offer end2end solution from ERP to MES system, 
+        ncluding Order, Inventory, Production, Planing, etc.
+    ''',
     'website': 'https://www.kuaihe.tech/',
     'author': 'kuai he',
     'license': 'LGPL-3',
@@ -19,7 +23,7 @@
     ],
     'auto_install': False,
     'application': True,
-    'images': ['static/description/icon.png'],
+    'images': ['static/description/banner.png'],
     'data': [
         'data/ir_config_parameter_data.xml',
         'data/mes_config_data.xml',

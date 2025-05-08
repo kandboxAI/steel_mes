@@ -22,8 +22,7 @@
                             <group>
                                 <field name="role_id"/>
                                 <field name="email"/>
-                                <field name="api_key"/>
-                                <field name="password"/>
+                                
                                 <field name="session_id"/>
 
                                 <field name="mes_jwt_token"/>
@@ -47,7 +46,6 @@
                     <field name="user_id"/>
                     <field name="role_id"/>
                     <field name="email"/>
-                    <field name="password"/>
                     <field name="session_id"/>
                     <field name="mes_jwt_token"/>
                     <field name="mes_jwt_token_expire_time"/>

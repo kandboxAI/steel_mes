@@ -6,6 +6,9 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_cancel']" position="after">
+                <button name="send_to_mes" string="同步MES" type="object" class="btn-primary"/>
+            </xpath>
             <xpath expr="//field[@name='order_line']//list//field[@name='name']" position="after">
                 <field name="mes_product_type" />
                 <field name="mes_spec" />
