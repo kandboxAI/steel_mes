@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Steel MES',
-    'summary': 'Steel MES',
+    'summary': 'AI can build the most efficient production plan. We offer end2end solution from ERP to MES system, ncluding Order, Inventory, Production, Planing, etc.',
     'version': '18.0.1.0.0',
     'category': 'Industries',
     'description': '''
